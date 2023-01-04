@@ -39,235 +39,306 @@ $shad: 4px 4px 16px -2px #0004;
 
 body{
     background: $bg;
-}
-
-.site-header{
-    @include flex();
-    gap: 3;
-    justify-content:center;
-    flex: 1;
-    padding: .5rem;
-    background-color: $white;
-
-    .site-details{
+    
+    .site-header{
         @include flex();
-
-        .site-logo{
-            width: 3rem;
-            border-radius: 50%;
-        }
-        .site-name{
-            color: $blue;
-        }
-    }
-    .site-nav{
-        flex: 3;
-
-        .nav-wrap{
+        gap: 3;
+        justify-content:center;
+        flex: 1;
+        padding: .5rem;
+        background-color: $white;
+    
+        .site-details{
             @include flex();
-            gap: 3rem;
-        }
-        .nav-wrap{
-            color: $blue;
-        }
-        .nav-wrap li a{
-            color: $blue;
-            font-weight: 600;
-            padding: .4rem 1rem;
-            border-radius: .4rem;
-            &:hover{
-            background: lighten($blue, 10);
-            color: $white;
-        }
-    }
-}
-}
-.main-body{
-
-    .site-body, .signup-section{
-        @include flex();
-        flex-wrap: wrap;
-        gap: 3rem;
-        padding: 3rem;
-
-        .aside-left{
-
-            .aside-title{
-                font-size: 5rem;
+    
+            .site-logo{
+                width: 3rem;
+                border-radius: 50%;
+            }
+            .site-name{
                 color: $blue;
             }
-            .aside-text{
-                font-size:larger;
+        }
+        .site-nav{
+            flex: 3;
+    
+            .nav-wrap{
+                @include flex();
+                gap: 3rem;
+            }
+            .nav-wrap{
+                color: $blue;
+            }
+            .nav-wrap li a{
+                color: $blue;
+                font-weight: 600;
+                padding: .4rem 1rem;
+                border-radius: .4rem;
+                &:hover{
+                background: lighten($blue, 10);
+                color: $white;
             }
         }
-        .aside-right, .aside-mid{
+        
+        .site-others{
+            @include flex();
+            gap: 1rem;
+    
+            .nav-icon{
+                position: relative;
+                cursor: pointer;
+                height: 25px;
+                width: 25px;
+                font-size: 0.9rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:$white;
+            }
+            .nav-toggle{
+                border: 1px solid #9999;
+                border-radius: 2px;
+                display:none;
+            }
+            .nav-icon:hover {
+
+            }
+        }
+    }
+}
+    
+    .main-body{
+    
+        .site-body, .signup-section{
+            @include flex();
+            flex-wrap: wrap;
+            gap: 3rem;
             padding: 3rem;
-            
-            .login-card, .register-card{
-                box-shadow: $shad;
-                background: $white;
-                border-radius: .7rem;
-                width: 23rem;
+    
+            .aside-left{
+    
+                .aside-title{
+                    font-size: 5rem;
+                    color: $blue;
+                }
+                .aside-text{
+                    font-size:larger;
+                }
+            }
+            .aside-right, .aside-mid{
+                padding: 3rem;
                 
-                .card-head{
-                    padding: 1rem;
-                    text-align: center;
-                    @include flex();
-
-                    .card-image{
-                        width: 4rem;
-                        border-radius: 50%;
-                    }
-                    .head-title{
-                        color: $blue;
-                    }
-                }
-
-                .site-image{
-                    border-radius: 50%;
-                    width: 3rem;
-                    text-align: center;
-                }
-
-                .login-inputs{}
-                .login-form, .signup-form{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1rem;
-                    padding: 1rem;
-
-                    input, select{
-                        outline:1px solid #b3b4b6;
-                        width: 100%;
+                .login-card, .register-card{
+                    box-shadow: $shad;
+                    background: $white;
+                    border-radius: .7rem;
+                    width: 23rem;
+                    
+                    .card-head{
                         padding: 1rem;
-                        border-radius: .2rem;
-                        font-size: .9rem;
-                        &:hover{
-                            box-shadow: $shad; 
+                        text-align: center;
+                        @include flex();
+    
+                        .card-image{
+                            width: 4rem;
+                            border-radius: 50%;
                         }
-                        &:focus{
-                            box-shadow: $shad;
-                            outline: 1px solid $blue;
-                            background: lighten($blue, 60);
-                        }
-                    }
-                    .login-btn, .register-btn{
-                        outline: none;
-                        color: $white;
-                        font-size: 1rem;
-                        font-weight: 700;
-                        background: $blue;
-                        cursor: pointer;
-                        padding: .7rem;
-                        border-radius: .3rem;
-                        border: 1px solid $blue;
-                        &:hover{
-                            background-color: lighten($blue,60);
+                        .head-title{
                             color: $blue;
                         }
                     }
-                    .register-btn{
-                        background-color: $green;
-                        border: 1px solid $green;
-                        &:hover{
-                            background-color: lighten($blue,60);
-                            color: $green;
-                        }
-                    }
-                    .forgot-password{
-                        color: $blue;
-                        text-align: center;
-                        padding: 0.3rem 1rem;
-                        &:hover{
-                            text-decoration: underline;
-                        }
-                    }
-                    hr{
-                        border: 1px solid lighten($text, 40);
-                    }
-                }
-                .register-card{
-                    width: 60rem;
-                }
-            }
-        }
-        
-    }
-    .signup-section{
-        
-        .aside-mid{
-            position: relative;
-            font-family: inherit;
-
-            .register-card{
-                width: 30rem;
-                position: relative;
-
-                .progress-count{
-                    text-align: center;
-                    font-size:smaller;
-
-                    .progress-number{
-                    }
-                }
-                .progress{
-                    height: 6px;
-                    background: #f4f4f4;
-                    border-radius: 2rem;
-                    position: relative;
-                    overflow: hidden;
-                    width: 80%;
-                    margin: 0 auto;
-                    height: 6px;
-
-                    .progress-bar{
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 100%;
-                        width: 1%;
-                        background-color: $red;
-                    }
-                }
-                .card-close{
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    padding: 1rem;
-                    background-color: lighten($text, 60);
-                    cursor: pointer;
-                    transition: all .25s ease-in-out .25s;
-                }
-
-                .card-head{
-
-                    .card-image{}
-                    .head-title{}
-                }
-                .head-small{
-                    text-align: center;
-                    font-size: 2rem;
-                    font-weight: 700;
-                    color: $text;
-                }
-                .signup-inputs{
     
-                    .signup-form{
-                        .divup{
-                            display: flex;
-                            gap: 0.6rem;
-
-                            .div{
-                                width: 100%;
+                    .site-image{
+                        border-radius: 50%;
+                        width: 3rem;
+                        text-align: center;
+                    }
+    
+                    .login-inputs{}
+                    .login-form, .signup-form{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        padding: 1rem;
+    
+                        input, select{
+                            outline:1px solid #b3b4b6;
+                            width: 100%;
+                            padding: 1rem;
+                            border-radius: .2rem;
+                            font-size: .9rem;
+                            &:hover{
+                                box-shadow: $shad; 
+                            }
+                            &:focus{
+                                box-shadow: $shad;
+                                outline: 1px solid $blue;
+                                background: lighten($blue, 60);
                             }
                         }
-                        
-                        .login-btn{}
-                        .register-btn{}
+                        .login-btn, .register-btn{
+                            outline: none;
+                            color: $white;
+                            font-size: 1rem;
+                            font-weight: 700;
+                            background: $blue;
+                            cursor: pointer;
+                            padding: .7rem;
+                            border-radius: .3rem;
+                            border: 1px solid $blue;
+                            &:hover{
+                                background-color: lighten($blue,60);
+                                color: $blue;
+                            }
+                        }
+                        .register-btn{
+                            background-color: $green;
+                            border: 1px solid $green;
+                            &:hover{
+                                background-color: lighten($blue,60);
+                                color: $green;
+                            }
+                        }
+                        .forgot-password{
+                            color: $blue;
+                            text-align: center;
+                            padding: 0.3rem 1rem;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                        hr{
+                            border: 1px solid lighten($text, 40);
+                        }
                     }
+                    .register-card{
+                        width: 60rem;
+                    }
+                }
             }
+            
+        }
+        .signup-section{
+            background-color: #0004;
+            .aside-mid{
+                position: relative;
+                font-family: inherit;
+    
+                .register-card{
+                    width: 30rem;
+                    position: relative;
+    
+                    .progress-count{
+                        text-align: center;
+                        font-size:smaller;
+    
+                        .progress-number{
+                        }
+                    }
+                    .progress{
+                        height: 6px;
+                        background: #f4f4f4;
+                        border-radius: 2rem;
+                        position: relative;
+                        overflow: hidden;
+                        width: 80%;
+                        margin: 0 auto;
+                        height: 6px;
+    
+                        .progress-bar{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            width: 1%;
+                            background-color: $red;
+                        }
+                    }
+                    .card-close{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: 1rem;
+                        background-color: lighten($text, 60);
+                        cursor: pointer;
+                        transition: all .25s ease-in-out .25s;
+                    }
+    
+                    .card-head{
+    
+                        .card-image{}
+                        .head-title{}
+                    }
+                    .head-small{
+                        text-align: center;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: $text;
+                    }
+                    .signup-inputs{
+        
+                        .signup-form{
+                            .divup{
+                                display: flex;
+                                gap: 0.6rem;
+    
+                                .div{
+                                    width: 100%;
+                                }
+                            }
+                            
+                            .login-btn{}
+                            .register-btn{}
+                        }
+                }
+                }
             }
         }
+        .site-footer{}
     }
-    .site-footer{}
+}
+
+@media screen and (max-width: 560px){
+    *{
+        transition: all .7s ease-in-out;
+    }
+    .site-header{
+        @include flex();
+        justify-content: left;
+    }
+    .site-nav{
+        position: absolute;
+        top: 11%;
+        left: 0%;
+        background: $white;
+        width: 10%;
+        display: none;
+    }
+    .site-nav2{
+        position: absolute;
+        top: 11%;
+        left: 0%;
+        background: $white;
+        width: 10%;
+    }
+    .nav-wrap2{
+        flex-direction: column;
+        gap: 0;
+        box-shadow: $shad;
+    }
+    .nav-wrap2 a{
+        padding: 1rem;
+        display: block;
+        flex: 1;
+        color: $blue;
+        border-bottom: 1px solid #0004;
+    }
+    .nav-wrap2 a:hover{
+        background: $blue;
+        color: $white;
+    }
+    .nav-toggle{
+        display: flex;
+    }
 }
