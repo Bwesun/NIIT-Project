@@ -61,28 +61,8 @@ body .site-header .site-nav2 {
   left: 0%;
   width: 0%;
 }
-body .site-header .site-others {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-body .site-header .site-others .nav-icon {
-  position: absolute;
-  cursor: pointer;
-  height: 25px;
-  width: 25px;
-  font-size: 0.9rem;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  color: #037fb4;
+body .site-header .site-nav2 .nav-wrap2 {
   display: none;
-}
-body .site-header .site-others .nav-toggle {
-  border: 1px solid rgba(153, 153, 153, 0.6);
-  border-radius: 2px;
-  padding: 1rem;
 }
 
 .main-body .site-body, .main-body .signup-section {
@@ -260,15 +240,15 @@ body .site-header .site-others .nav-toggle {
     align-items: center;
   }
   .site-nav2 {
-    position: absolute;
     position: fixed;
   }
   .nav-wrap2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    display: flex !important;
     padding: 1rem;
+    flex-direction: column;
     gap: 2rem;
   }
   .nav-wrap2 li a, .nav-wrap2 li img {

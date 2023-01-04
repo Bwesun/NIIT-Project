@@ -83,30 +83,9 @@ body{
             top: 0%;
             left: 0%;
             width: 0%;
-        }
-        
-        .site-others{
-            @include flex();
-            gap: 1rem;
-    
-            .nav-icon{
-                position: absolute;
-                cursor: pointer;
-                height: 25px;
-                width: 25px;
-                font-size: 0.9rem;
-                border-radius: 50%;
-                align-items: center;
-                justify-content: center;
-                color:$blue;
+            .nav-wrap2{
                 display: none;
             }
-            .nav-toggle{
-                border: 1px solid #9999;
-                border-radius: 2px;
-                padding: 1rem;
-            }
-            
         }
     }
 }
@@ -321,13 +300,13 @@ body{
         align-items: center;
     }
     .site-nav2{
-        position: absolute;
         position: fixed;
     }
     .nav-wrap2{
         @include flex();
-        flex-direction: column;
+        display: flex !important;
         padding: 1rem;
+        flex-direction: column;
         gap: 2rem;
     }
     .nav-wrap2 li a, .nav-wrap2 li img{
