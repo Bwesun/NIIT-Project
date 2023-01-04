@@ -16,6 +16,7 @@
         <a href="./" class="site-details">
             <img src="./images/site-logo.png" alt="Site Logo" class="site-logo"> <h2 class="site-name">Censono</h2>
         </a>
+
         <nav class="site-nav">
             <ul class="nav-wrap">
                 <li><a href="#">Home</a></li>
@@ -24,14 +25,21 @@
             </ul>
         </nav>
     </header>
+
     <main class="main-body">
         <section class="site-body">
             <aside class="aside-left">
                 <h2 class="aside-title">Censono</h2>
                 <p class="aside-text">Censono helps you connect and share with the people in your life.</p>
             </aside>
+
             <aside class="aside-right">
-                <div class="login-card">
+                <div class="login-card" id="login-form">
+                    <div class="card-head">
+                        <img src="./images/site-logo.png" alt="Censono Logo" class="card-image">
+                        <h3 class="head-title">Censono</h3>
+                    </div>
+
                     <div class="login-inputs">
                         <form action="" class="login-form">
                             <input type="email" name="" id="email" placeholder="Enter E-mail" required>
@@ -39,13 +47,144 @@
                             <button type="submit" class="login-btn">Log in</button>
                             <a href="#" class="forgot-password">Forgotten Password?</a>
                             <button type="submit" class="register-btn">Creat New Account</button>
+                            <button class="course-btn">Hello</button>
                         </form>
                     </div>
                 </div>
             </aside>
         </section>
+
+        <section class="signup-section">
+            <aside class="aside-mid">
+                <div class="register-card">
+                        <button class="card-close" onclick="closeRegister()">
+                            <i class="fa fa-close"></i>
+                        </button>
+                    <div class="card-head">
+                        <img src="./images/site-logo.png" alt="Censono Logo" class="card-image">
+                        <h3 class="head-title">Censono</h3>
+                    </div>
+                    <p class="head-small">Sign Up</p>
+                    <div class="progress-count">
+                        <span class="progress-number">0</span> of 7 Fields Completed
+                    </div>
+                    <div class="progress">
+                        <span class="progress-bar"></span>
+                    </div>
+
+                    <div class="signup-inputs">
+                        <form action="" name="regform" class="signup-form" oninput="validation()">
+                            <span class="alert"></span>
+                            <div class="divup">
+                                <div class="div">
+                                    <input type="text" name="firstname" id="firstname" placeholder="Enter First name" required>
+                                </div>
+                                <div class="div">
+                                    <input type="text" name="lastname" id="lastname" placeholder="Enter Last name" required>
+                                </div>
+                            </div>
+
+                            <div class="divup">
+                                <div class="div">
+                                    <input type="email" name="email" id="email" placeholder="Enter e-mail address" required>
+                                </div>
+                                <div class="div">
+                                    <input type="tel" name="phone" id="phone" placeholder="Enter phone no." required>
+                                </div>
+                            </div>
+
+                            <div class="divup">
+                                <div class="div">
+                                    <label for="dob">Date of Birth
+                                        <input type="date" name="dob" id="dob" required>
+                                    </label>
+                                </div>
+                                <div class="div">
+                                    <select name="gender" id="gender" required>
+                                        <option value="">--- Select Gender ---</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="divup">
+                                <div class="div">
+                                    <input type="password" name="password" placeholder="Enter New Password" id="password" required>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="register-btn">Sign Up</button>
+                            <a href="#login-form" class="forgot-password">Log in</a>
+                        </form>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
         <footer class="site-footer"> Censono &copy; 2023</footer>
     </main>
+<script>
     
+    function validation(totalNumber){
+        let firstName = document.regform.firstname.value;
+        let lastName = document.regform.lastname.value;
+        let email = document.regform.email.value;
+        let phone = document.regform.phone.value;
+        let dob = document.regform.dob.value;
+        let gender = document.regform.gender.value;
+        let passWord = document.regform.password.value;
+
+        let sum = 0;
+        let progressNumber = document.querySelector(".progress-number")
+        if (firstName.length > 0){
+            sum++; 
+            progressNumber.innerHTML = sum;
+        }
+        if(lastName.length >= 1){
+            let newNum = 1;
+            sum = sum+newNum;
+            progressNumber.innerHTML = sum;
+        }
+        if(email.length >= 1){
+            let newNum = 1;
+            sum = sum+newNum;
+            progressNumber.innerHTML = sum;
+        }
+        if(phone.length >= 1){
+            let newNum = 1;
+            sum = sum+newNum;
+            progressNumber.innerHTML = sum;
+        }
+        if(dob.length >= 1){
+            let newNum = 1;
+            sum = sum+newNum;
+            progressNumber.innerHTML = sum;
+        }
+        if(gender.length >= 1){
+            let newNum = 1;
+            sum = sum+newNum;
+            progressNumber.innerHTML = sum;
+        }
+        if(passWord.length >= 1){
+            let newNum = 1;
+            sum = sum+newNum;
+            progressNumber.innerHTML = sum;
+        }
+
+        let progressBar = 
+    }
+
+    
+
+    let totalNumber = 0;   
+    let firstNo = 1; 
+    
+    function getElem(element){
+        return document.querySelector(element);
+    }
+
+    console.log();
+</script>
 </body>
 </html>
