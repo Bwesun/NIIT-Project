@@ -159,7 +159,7 @@ body{
                                 background: lighten($blue, 60);
                             }
                         }
-                        .login-btn, .register-btn{
+                        .login-btn, .register-btn, .reset-btn{
                             outline: none;
                             color: $white;
                             font-size: 1rem;
@@ -169,6 +169,7 @@ body{
                             padding: .7rem;
                             border-radius: .3rem;
                             border: 1px solid $blue;
+                            width: 100%;
                             &:hover{
                                 background-color: lighten($blue,60);
                                 color: $blue;
@@ -177,6 +178,7 @@ body{
                         .register-btn{
                             background-color: $green;
                             border: 1px solid $green;
+                            width: 100%;
                             &:hover{
                                 background-color: lighten($blue,60);
                                 color: $green;
@@ -245,9 +247,16 @@ body{
                         top: 0;
                         right: 0;
                         padding: 1rem;
-                        background-color: lighten($text, 60);
+                        background-color: lighten($red, 10);
                         cursor: pointer;
-                        transition: all .25s ease-in-out .25s;
+                        font-size: large;
+                        color: white;
+                        transition: all .05s ease-in-out .05s;
+                        border-radius: 0rem 0rem 0rem 1rem;
+                        &:hover{
+                            background: lighten($red, 40);
+                            color: darken($text, 20);
+                        }
                     }
     
                     .card-head{
@@ -267,7 +276,6 @@ body{
                             .divup{
                                 display: flex;
                                 gap: 0.6rem;
-    
                                 .div{
                                     width: 100%;
                                 }
