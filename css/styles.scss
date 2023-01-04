@@ -1,5 +1,13 @@
 *{
-
+    margin: 0%;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out;
 }
 
 $blue: rgb(45, 169, 233);
@@ -7,3 +15,6 @@ $neBlue: #009de2;
 $red: #ea0038;
 $lightBlue: #d1d7db; 
 $shadBlue: #667781;
+$bg: #f0f2f5;
+$text: #1c1e21;
+
