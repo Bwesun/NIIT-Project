@@ -56,7 +56,7 @@
                             <input type="password" name="" id="password" placeholder="Enter Password" required>
                             <button type="submit" class="login-btn">Log in</button>
                             <a href="#" class="forgot-password">Forgotten Password?</a>
-                            <button type="button" onclick="openRegister()" class="register-btn">Creat New Account</button>
+                            <button type="button" class="register-btn">Creat New Account</button>
                             <button class="course-btn">Hello</button>
                         </form>
                     </div>
@@ -67,7 +67,7 @@
         <section class="signup-section">
             <aside class="aside-mid">
                 <div class="register-card">
-                        <button class="card-close" onclick="closeRegister()">
+                        <button class="card-close">
                             <i class="fa fa-close"></i>
                         </button>
                     <div class="card-head">
@@ -125,7 +125,6 @@
                             </div>
 
                             <button type="submit" class="register-btn">Sign Up</button>
-                            <a href="#login-form" class="forgot-password">Log in</a>
                         </form>
                     </div>
                 </div>
@@ -135,17 +134,21 @@
         <footer class="site-footer"> Censono &copy; 2023</footer>
     </main>
 <script>
-    function openRegister(){
-        let signupSection = querySelector(".signup-section");
-        signupSection.onclick = function(){
-            signupSection.classList.toggle('show-signup');
+        let signupButton = document.querySelector(".register-btn");
+        let signupSection = document.querySelector(".signup-section");
+        signupButton.onclick = function(){
+            signupSection.classList.add('show-signup');
         }
-    }
+
+        let closeButton = document.querySelector(".card-close");
+        closeButton.onclick = function(){
+            signupSection.classList.remove('show-signup');
+        }
 
     let navIcon = document.querySelector('.nav-toggle');
     let navBar = document.querySelector('.site-nav');
     navIcon.onclick = function(){
-        navBar.classList.toggle('nav-show');
+        navBar.classList.toggle('.nav-show');
     }
     
     // FORM VALIDATION AND PROGRESS SCRIPT

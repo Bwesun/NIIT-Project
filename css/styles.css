@@ -57,7 +57,7 @@ body .site-header .site-nav .nav-wrap li a:hover {
   color: #fff;
 }
 body .site-header .site-nav2 {
-  top: 11%;
+  top: 0%;
   left: 0%;
   width: 0%;
 }
@@ -188,6 +188,7 @@ body .site-header .site-others .nav-toggle {
 }
 .main-body .signup-section {
   background-color: rgba(0, 0, 0, 0.2666666667);
+  width: 100%;
   display: none;
 }
 .main-body .signup-section .aside-mid {
@@ -242,33 +243,47 @@ body .site-header .site-others .nav-toggle {
 .main-body .signup-section .aside-mid .register-card .signup-inputs .signup-form .divup .div {
   width: 100%;
 }
+.main-body .show-signup {
+  left: 0% !important;
+  top: 0%;
+  position: absolute;
+  display: flex !important;
+}
+
 @media screen and (max-width: 560px) {
   * {
     transition: all 0.7s ease-in-out;
   }
   .site-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
   .site-nav2 {
     position: absolute;
-    top: 11%;
-    left: 15%;
-    background-color: #fff;
-    width: 10%;
+    position: fixed;
   }
   .nav-wrap2 {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #fff;
     padding: 1rem;
     gap: 2rem;
   }
-  .nav-wrap2 li a {
-    padding: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2666666667);
+  .nav-wrap2 li a, .nav-wrap2 li img {
+    padding: 0.99rem;
+    background-color: white;
+    color: #037fb4;
+    box-shadow: 4px 4px 16px -2px rgba(0, 0, 0, 0.2666666667);
+    left: 0%;
+  }
+  .nav-wrap2 li a:hover {
+    background: #037fb4;
+    color: #fff;
+  }
+  .aside-left, .site-details, .site-logo, .site-name {
+    display: none;
   }
   .site-nav {
     display: none;
