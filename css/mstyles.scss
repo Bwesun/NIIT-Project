@@ -199,7 +199,6 @@ body{
             }
             .aside-right{
                 height:100vh; 
-                overflow-y: scroll;
                 width: 65%;
                 border-left: 1px solid lighten($text, 60);
                 border-right: 1px solid lighten($text, 60);
@@ -255,7 +254,7 @@ body{
                     }
                 }
                 .aside-mid{
-                    height:78vh; 
+                    height:70vh; 
                     overflow-y: scroll;
                     padding: 1rem;
                     background-color: lighten($blue, 55);
@@ -264,9 +263,9 @@ body{
 
                         .cover-chat-wrap{
                             @include flex();
-                            justify-content: flex-start;
-                            flex-direction: column;
-                            max-width: 50%;
+                            justify-content: flex-end;
+                            flex-direction: row;
+                            width: 50%;
 
                             .chat-wrap{
                                 display: flex;

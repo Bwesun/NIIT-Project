@@ -156,7 +156,6 @@ body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .fri
 }
 body .main-body .body-wrap .aside-right {
   height: 100vh;
-  overflow-y: scroll;
   width: 65%;
   border-left: 1px solid #dcdee3;
   border-right: 1px solid #dcdee3;
@@ -225,7 +224,7 @@ body .main-body .body-wrap .aside-right .aside-top .user-details .name-icons .na
   cursor: pointer;
 }
 body .main-body .body-wrap .aside-right .aside-mid {
-  height: 78vh;
+  height: 70vh;
   overflow-y: scroll;
   padding: 1rem;
   background-color: #dbf2fc;
@@ -234,9 +233,9 @@ body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .cover-chat-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  max-width: 50%;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 50%;
 }
 body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .cover-chat-wrap .chat-wrap {
   display: flex;
