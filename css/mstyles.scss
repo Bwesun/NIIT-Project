@@ -233,7 +233,6 @@ body{
     
                                     .user-seen{
                                         @include small();
-                                        color: $text;
                                     }
                                 }
                             }
@@ -298,7 +297,6 @@ body{
                                 padding: .4rem;
                                 border-radius: .3rem;
                                 margin-bottom: .5rem;
-                                color: $white;
                             }
                         }
                     }
