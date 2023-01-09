@@ -12,4 +12,234 @@
 
 body {
   background-color: #f3f7f9;
+}
+body .main-body .body-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+body .main-body .body-wrap .aside-left {
+  border-right: 1px solid #c0c4cc;
+  border-left: 1px solid #c0c4cc;
+  width: 30%;
+}
+body .main-body .body-wrap .aside-left .nav-top {
+  padding: 1rem;
+  background-color: #fff;
+}
+body .main-body .body-wrap .aside-left .nav-top .wrap-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+body .main-body .body-wrap .aside-left .nav-top .wrap-top .profile-image {
+  width: 3rem;
+  border-radius: 50%;
+  box-shadow: 4px 4px 16px -2px rgba(0, 0, 0, 0.2666666667);
+  padding: 0.2rem;
+  cursor: pointer;
+}
+body .main-body .body-wrap .aside-left .nav-top .wrap-top .nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+body .main-body .body-wrap .aside-left .nav-top .wrap-top .nav-icons .nav-icon {
+  font-size: 1rem;
+  color: #3f444e;
+  padding: 0.8rem;
+  border-radius: 2rem 2rem;
+}
+body .main-body .body-wrap .aside-left .nav-top .wrap-top .nav-icons .nav-icon:hover {
+  background-color: #f3f7f9;
+  cursor: pointer;
+}
+body .main-body .body-wrap .aside-left .nav-mid {
+  padding: 1rem;
+}
+body .main-body .body-wrap .aside-left .nav-mid .wrap-mid .archived {
+  color: #3f444e;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+body .main-body .body-wrap .aside-left .nav-mid .wrap-mid .archived .archive-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+body .main-body .body-wrap .aside-left .nav-mid .wrap-mid .archived .archive-count {
+  color: #0e80b1;
+  padding: 0.1rem 0.4rem;
+  border-radius: 1rem;
+  background-color: #c4eafa;
+  font-size: small;
+  font-weight: 300;
+}
+body .main-body .body-wrap .aside-left .nav-bottom {
+  padding: 1rem;
+  background-color: #fff;
+}
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid #c0c4cc;
+  padding-bottom: 0.5rem;
+}
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image .friend-image {
+  width: 3rem;
+  border-radius: 50%;
+  box-shadow: 4px 4px 16px -2px rgba(0, 0, 0, 0.2666666667);
+  padding: 0.2rem;
+}
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image .left-cover .friend-name {
+  color: #3f444e;
+  font-weight: 400;
+}
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image .left-cover .friend-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  color: #3f444e;
+}
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image .left-cover .friend-message .sent-message, body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image .left-cover .friend-message .fa-check-double {
+  font-size: small;
+  font-weight: 300;
+}
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .friend-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 7.5rem;
+}
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .friend-details .right-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .friend-details .right-cover .message-time {
+  font-size: small;
+  font-weight: 300;
+}
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .friend-details .right-cover .message-count {
+  color: #0e80b1;
+  padding: 0.1rem 0.4rem;
+  border-radius: 1rem;
+  background-color: #c4eafa;
+  font-size: small;
+  font-weight: 300;
+}
+body .main-body .body-wrap .aside-right {
+  width: 70%;
+}
+body .main-body .body-wrap .aside-right .aside-top {
+  background-color: #fff;
+  padding: 1rem;
+}
+body .main-body .body-wrap .aside-right .aside-top .user-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+body .main-body .body-wrap .aside-right .aside-top .user-details .name-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+body .main-body .body-wrap .aside-right .aside-top .user-details .name-image .top-image {
+  width: 3rem;
+  border-radius: 50%;
+  box-shadow: 4px 4px 16px -2px rgba(0, 0, 0, 0.2666666667);
+  padding: 0.2rem;
+}
+body .main-body .body-wrap .aside-right .aside-top .user-details .name-image .name-seen .user-name {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #3f444e;
+}
+body .main-body .body-wrap .aside-right .aside-top .user-details .name-image .name-seen .last-seen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: small;
+  font-weight: 300;
+}
+body .main-body .body-wrap .aside-right .aside-top .user-details .name-image .name-seen .last-seen .user-seen {
+  font-size: small;
+  font-weight: 300;
+}
+body .main-body .body-wrap .aside-right .aside-top .user-details .name-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+body .main-body .body-wrap .aside-right .aside-top .user-details .name-icons .nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+body .main-body .body-wrap .aside-right .aside-top .user-details .name-icons .nav-icons .nav-icon {
+  font-size: 1rem;
+  color: #3f444e;
+  padding: 0.8rem;
+  border-radius: 2rem 2rem;
+}
+body .main-body .body-wrap .aside-right .aside-top .user-details .name-icons .nav-icons .nav-icon:hover {
+  background-color: #f3f7f9;
+  cursor: pointer;
+}
+body .main-body .body-wrap .aside-right .aside-mid {
+  padding: 1rem;
+  background: #e6e6ff;
+}
+body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .chat-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  max-width: 50%;
+  background-color: #fff;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+}
+body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .chat-wrap .chat-message {
+  font-size: 0.95rem;
+  color: #1a1c3f;
+}
+body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .chat-wrap .chat-time {
+  font-size: smaller;
+}
+body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .chat-wrap .chat-owner {
+  display: none;
+}
+body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .chat-wrap .chat-message-sub {
+  background-color: #656bc0;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
 }/*# sourceMappingURL=mstyles.css.map */

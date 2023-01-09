@@ -17,7 +17,7 @@
             <aside class="aside-left">
                 <div class="nav-top">
                     <div class="wrap-top">
-                        <img src="./images/passport.jpg" alt="User Profile Image" class="profile-image">
+                        <img src="./images/user3.jpg" alt="User Profile Image" class="profile-image">
                         <div class="nav-icons">
                             <span class="nav-icon"><i class="fa fa-search"></i></span>
                             <span class="nav-icon"><i class="fa fa-plus"></i></span>
@@ -28,7 +28,11 @@
                 <div class="nav-mid">
                     <div class="wrap-mid">
                         <div class="archived">
-                            <i class="fa fa-archive"></i> Archived
+                            <div class="archive-icon">
+                                <i class="fa fa-archive"></i>
+                                <a class="archive-btn">Archived</a>
+                            </div> 
+                            <p class="archive-count">12</p>
                         </div>
                     </div>
                 </div>
@@ -36,17 +40,24 @@
                     <div class="wrap-bottom">
                         <ul class="message-nav">
                             <li><a href="">
-                                <img src="./images/passport.jpg" alt="DP" class="friend-image">
                                 <div class="friend-div">
-                                    <div class="friend-details">
-                                        <h3 class="friend-name">Emily Matur</h3>
-                                        <div class="friend-message">
-                                            <i class="fa fa-check-double"></i> <i class="fa fa-check-circle"></i> <i class="fa fa-check-square"></i> <p class="sent-message">I'm looking forward to it</p>
+                                    <div class="name-image">
+                                        <img src="./images/user2.jpg" alt="DP" class="friend-image">
+                                        <div class="left-cover">
+                                            <h3 class="friend-name">Emily Matur</h3>
+                                            <div class="friend-message">
+                                                <i class="fa fa-check-double"></i> 
+                                                <!-- <i class="fa fa-check-circle"></i> 
+                                                    <i class="fa fa-check-square"></i>  -->
+                                                    <p class="sent-message">I'm looking forward to it</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="message-subs">
-                                        <p class="message-time">08:21</p>
-                                        <span class="message-count">2</span>
+                                    <div class="friend-details">
+                                        <div class="right-cover">
+                                            <p class="message-time">08:21</p>
+                                            <span class="message-count">2</span>
+                                        </div>
                                     </div>
                                 </div>
                             </a></li>
@@ -56,15 +67,17 @@
             </aside>
             <aside class="aside-right">
                 <div class="aside-top">
-                    <div class="top-wrap">
-                        <div class="user-details">
-                            <img src="./images/passport.jpg" alt="" class="top-image">
+                    <div class="user-details">
+                        <a href=""> <div class="name-image">
+                            <img src="./images/user1.jpg" alt="" class="top-image">
                             <div class="name-seen">
                                 <h3 class="user-name">Beate Lemoine</h3>
                                 <div class="last-seen">
                                     <i class="fa fa-history"></i> <p class="user-seen">last seen today at 09:15 PM</p>
                                 </div>
                             </div>
+                        </div></a> 
+                        <div class="name-icons">
                             <div class="nav-icons">
                                 <span class="nav-icon"><i class="fa fa-video"></i></span>
                                 <span class="nav-icon"><i class="fa fa-phone"></i></span>
@@ -76,8 +89,9 @@
                     <div class="mid-wrap">
                         <div class="chat-wrap">
                             <p class="chat-message">I'm glad we had time to meet up.</p> <p class="chat-time">06:54</p>
+                            <span class="chat-owner">me</span>
                         </div>
-                    </div>
+                    </div> 
                 </div>
                 <div class="aside-bottom">
                     <div class="bottom-wrap">
@@ -95,5 +109,14 @@
             </aside>
         </div>
     </main>
+    <script>
+        let chatty = document.querySelector(".chat-owner");
+        console.log();
+        let test = chatty.innerHTML;
+
+        if (test == "me"){
+            
+        }
+    </script>
 </body>
 </html>
