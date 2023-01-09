@@ -79,10 +79,11 @@ body{
             align-items: flex-start;
             padding: 1rem;
             flex-wrap: wrap;
+            gap: 1rem;
 
             .aside-left{
-                border-right: 1px solid lighten($text, 50);
-                border-left: 1px solid lighten($text, 50);
+                border-right: 1px solid lighten($text, 60);
+                border-left: 1px solid lighten($text, 60);
                 width: 30%;
 
                 .nav-top{
@@ -193,7 +194,9 @@ body{
                 }
             }
             .aside-right{
-                width: 70%;
+                width: 65%;
+                border-left: 1px solid lighten($text, 60);
+                border-right: 1px solid lighten($text, 60);
 
                 .aside-top{
                     background-color: $white;
@@ -247,46 +250,74 @@ body{
                 .aside-mid{
                     padding: 1rem;
                     background: lighten(blue, 45);
-
+                    
                     .mid-wrap{
 
-                        .chat-wrap{
+                        .cover-chat-wrap{
                             @include flex();
-                            justify-content: space-between;
+                            justify-content: flex-start;
+                            flex-direction: column;
                             max-width: 50%;
-                            background-color:$white;
-                            padding: .4rem;
-                            border-radius: .3rem;
-                            
-                            .chat-message{
-                                font-size: .95rem;
-                                color: darken($chatblue, 40);
-                            }
-                            .chat-time{
-                                font-size:smaller;
-                            }
-                            .chat-owner{
-                                display: none;
-                            }
 
-                            // FOR THE "YOU" PERSON
-                            .chat-message-sub{
-                                background-color:$chatblue;
+                            .chat-wrap{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: flex-end;
+                                background-color:$white;
                                 padding: .4rem;
                                 border-radius: .3rem;
+                                margin-bottom: .5rem;
+                                
+                                
+                                .chat-message{
+                                    font-size: .95rem;
+                                    color: darken($chatblue, 40);
+                                }
+                                .chat-time{
+                                    font-size:smaller;
+                                }
+                                .chat-owner{
+                                    display: none;
+                                }
+                            }
+                            // FOR THE "YOU" PERSON
+                            .chat-wrap-sub{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: flex-end;
+                                max-width: 50%;
+                                background-color:$white;
+                                padding: .4rem;
+                                border-radius: .3rem;
+                                margin-bottom: .5rem;
                             }
                         }
                     }
                 }
                 .aside-bottom{
+                    padding: 1rem;
 
                     .bottom-wrap{
+                        gap: 1rem;
 
-                        .text-area{}
+                        .text-area input{
+                            width: 90%;
+                            padding: 1rem 2rem;
+                            border-radius: .5rem;
+                            &:focus{
+                                background-color: lighten($blue, 60);
+                                border: 1px solid $lightbluebg;
+                            }
+                        }
                         .send-icons{
 
-                            .other-icon{}
-                            .chat-send{}
+                            .other-icon{
+                                @include nav_icon();
+                            }
+                            .chat-send{
+                                @include nav_icon();
+
+                            }
                         }
                     }
                 }
