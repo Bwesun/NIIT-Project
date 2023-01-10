@@ -75,6 +75,8 @@ body{
     .main-body{
 
         .body-wrap{
+            height:98vh; 
+            overflow-y: scroll;
             @include flex();
             align-items: flex-start;
             padding: 1rem;
@@ -82,6 +84,8 @@ body{
             gap: 1rem;
 
             .aside-left{
+                height:100vh; 
+                overflow-y: scroll;
                 border-right: 1px solid lighten($text, 60);
                 border-left: 1px solid lighten($text, 60);
                 width: 30%;
@@ -194,6 +198,8 @@ body{
                 }
             }
             .aside-right{
+                height:100vh; 
+                overflow-y: scroll;
                 width: 65%;
                 border-left: 1px solid lighten($text, 60);
                 border-right: 1px solid lighten($text, 60);
@@ -248,6 +254,8 @@ body{
                     }
                 }
                 .aside-mid{
+                    height:78vh; 
+                    overflow-y: scroll;
                     padding: 1rem;
                     background-color: lighten($blue, 55);
                     
@@ -296,29 +304,42 @@ body{
                 }
                 .aside-bottom{
                     padding: 1rem;
+                    background-color: $white;
 
                     .bottom-wrap{
                         gap: 1rem;
+                        @include flex();
+                        justify-content:space-between;
+                        .text-area{
+                            display: flex;
+                            align-items: center;
+                            width: 100%; 
+                            gap: 1rem;
+
+                            .input-icon{
+                                font-size: 1.2rem;
+                                color: $text;
+                                padding: .5rem;
+                                border-radius: 2rem 2rem;
+                                &:hover{
+                                    background-color: lighten($lightbluebg, 10);
+                                    cursor: pointer;
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
 
                         .text-area input{
                             width: 90%;
                             padding: 1rem 2rem;
                             border-radius: .5rem;
+                            background-color: lighten($blue, 60);
                             &:focus{
                                 background-color: lighten($blue, 60);
                                 border: 1px solid $lightbluebg;
                             }
                         }
-                        .send-icons{
-
-                            .other-icon{
-                                @include nav_icon();
-                            }
-                            .chat-send{
-                                @include nav_icon();
-
-                            }
-                        }
+                        
                     }
                 }
             }
