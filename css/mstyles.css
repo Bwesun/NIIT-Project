@@ -200,6 +200,7 @@ body .main-body .body-wrap .aside-right .aside-top .user-details .name-image .na
 body .main-body .body-wrap .aside-right .aside-top .user-details .name-image .name-seen .last-seen .user-seen {
   font-size: small;
   font-weight: 300;
+  color: #3f444e;
 }
 body .main-body .body-wrap .aside-right .aside-top .user-details .name-icons {
   display: flex;
@@ -265,6 +266,7 @@ body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .cover-chat-wrap .c
   padding: 0.4rem;
   border-radius: 0.3rem;
   margin-bottom: 0.5rem;
+  color: #fff;
 }
 body .main-body .body-wrap .aside-right .aside-bottom {
   padding: 1rem;
