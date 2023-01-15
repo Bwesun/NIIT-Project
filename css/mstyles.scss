@@ -88,7 +88,6 @@ body{
     .main-body{
 
         .body-wrap{
-            position: relative;
             height:98vh; 
             overflow-y: auto;
             @include flex();
@@ -627,5 +626,25 @@ body{
                 }
             }
         }
+    }
+}
+
+
+@media screen and (max-width: 660px){
+    *{
+        transition: all .7s ease-in-out;
+    }
+    
+    body{
+        background-color: #ea0038;
+    }
+    .body-wrap{
+        background-color: #0e80b1;
+    }
+    .aside-left{
+        width: 198%;
+    }
+    .aside-right{
+        width: 1%;
     }
 }

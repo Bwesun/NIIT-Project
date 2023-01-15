@@ -15,7 +15,6 @@ body {
   background-color: #f3f7f9;
 }
 body .main-body .body-wrap {
-  position: relative;
   height: 98vh;
   overflow-y: auto;
   display: flex;
@@ -542,4 +541,22 @@ body .main-body .body-wrap .aside-right .aside-bottom .bottom-wrap .text-area in
 body .main-body .body-wrap .aside-right .aside-bottom .bottom-wrap .text-area input:focus {
   background-color: #f3fbfe;
   border: 1px solid #d2e2e7;
+}
+
+@media screen and (max-width: 660px) {
+  * {
+    transition: all 0.7s ease-in-out;
+  }
+  body {
+    background-color: #ea0038;
+  }
+  .body-wrap {
+    background-color: #0e80b1;
+  }
+  .aside-left {
+    width: 198%;
+  }
+  .aside-right {
+    width: 1%;
+  }
 }/*# sourceMappingURL=mstyles.css.map */
