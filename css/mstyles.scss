@@ -9,6 +9,8 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     transition: all .4s ease-in-out;
+    scrollbar-width: thin;
+    // scrollbar-color: blue red;
 }
 
 // VARIABLE DECLARATION
@@ -48,6 +50,14 @@ $shad: 4px 4px 16px -2px #0004;
     padding: 0.2rem;
 }
 
+@mixin profile_image2(){
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 0.2rem;
+}
+
 @mixin small(){
     font-size: small;
     font-weight: 300;
@@ -78,25 +88,26 @@ body{
     .main-body{
 
         .body-wrap{
+            position: relative;
             height:98vh; 
-            overflow-y: scroll;
+            overflow-y: auto;
             @include flex();
             align-items: flex-start;
-            padding: 1rem;
+            padding: 0rem 1rem;
             flex-wrap: wrap;
             gap: 1rem;
 
-            .aside-profile{
+            .aside-profile, .user-profile{
                 width: 30%;
                 position: absolute;
                 background-color: $bg;
                 border-right: 1px solid lighten($text, 60);
                 box-shadow: $shad;
                 height: 98vh;
-                left: 0%;
-                top: 2.5%;
+                overflow-y: auto;
+                left: -100%;
 
-                .profile-top{
+                .profile-top, .user-profile-top{
                     height: 7rem;
                     background: $blue;
                     color: $white;
@@ -106,30 +117,158 @@ body{
                     align-items: flex-end;
                     justify-content: flex-start;
                     
-                    .profile-head{
+                    .profile-head, .user-profile-head{
                         font-weight: 600;
                     }
 
-                    .profile-arrow{
+                    .profile-arrow, .user-profile-close{
                         &:hover{
                             cursor: pointer;
                         }
                     }
                 }
 
-                .profile-mid{
+                .profile-mid, .user-profile-mid{
                     padding: 1.5rem;
                     @include flex();    
+                    
+                    .profile-image-cover, .user-profile-image-cover{
+                        position: relative;
+                        
+                        .main-profile-image, .user-main-profile-image{
+                            border-radius: 50%;
+                            width: 8.5rem;
+                            height: 8.5rem;
+                            object-fit: cover;
+                            background-color: $white;
+                            padding: 0.2rem;
+    
+                            &:hover{
+                                background-color: linear-gradient(#0004, #0004);
+                            }
+                        }
 
-                    .main-profile-image{
-                        border-radius: 50%;
-                        width: 10rem;
+                    }
+                    .image-overlay{
+                        @include overlay(); 
+                        @include flex();
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #3f444e;
+                        opacity: .8;
+                        padding: 50%;
+                        border-radius: 51%;
+                        left: -100%;
+                        display: none;
+                        color: #fff;
+                        text-align: center;
 
-                        &:hover{
-                            background: linear-gradient(#0004, #0004);
+                        .edit-image-icon{
+                            font-size: large;
+                            color: #fff;
+                        }
+                    }
+                    &:hover{
+                        .image-overlay{
+                            left: 0% !important;
+                            cursor: pointer;
+                            transition: all .25s;
+                            display: block;
                         }
                     }
                 }
+
+                .main-profile-name, .profile-about, .user-main-profile-name, .user-main-profile-email{
+                    border-top: 1px solid lighten($text, 60);
+                    padding: 1rem;
+                    color: $text;
+                    background-color: $white;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+
+                    .main-name-cover, .profile-about-cover{
+
+                        .name-head, .about-head{
+                            color: $blue;
+                            font-weight: 400;
+                            font-size: small;
+                            padding: 0.5rem;
+                        }
+    
+                        .main-name,.profile-about-content{
+                            font-weight: 400;
+                            font-size: medium;
+                            padding: .5rem;
+                        }
+    
+                    }
+                    .aside-icon{
+                        color: $text;
+                        padding: 0.3rem;
+                        cursor: pointer;
+                    }
+                }
+                .user-main-profile-name{
+                    padding: 0.5rem;
+                }
+                .user-main-profile-email{
+                    padding: 0.5rem;
+                    background-color: $bg;
+                }
+
+                .profile-about{
+                    background-color: $bg;
+                    border-bottom: 1px solid lighten($text, 60);
+                }
+                .user-profile-about{
+                    background-color: $white;
+                    padding: 0.5rem;
+                }
+
+                .profile-logout, .user-profile-logout{
+                    padding: 1rem;
+                    @include flex();
+                    gap: 1rem;
+
+                    .logout-btn, .delete-btn, .report-btn{
+                        padding: .7rem 2rem;
+                        border-radius: 3rem;
+                        border: 1px solid lighten($text, 50);
+                        background-color: $white;
+                        color: $text;
+                        cursor: pointer; 
+
+                        &:hover{
+                            background-color: $blue;
+                            color: $white;
+                            font-weight:bold;
+                        }
+                    }
+                    .delete-btn, .report-btn{
+                        color: $red;
+                        border: 1px solid $red;
+                        font-size: smaller;
+                        padding: 0.3rem 0.6rem;
+                        &:hover{
+                            background-color: lighten($red, 20);
+                        }
+                    }
+                }
+            }
+            .user-profile{
+                border-left: 1px solid lighten($text, 60); 
+                left: 102%;
+                width: 30%;
+                position: absolute;
+            }
+            .user-profile-show{
+                display: block;
+                left: 71%;
+            }
+            .show-profile{
+                left: 0%;
+                display: block;
             }
 
             .aside-left{
@@ -148,8 +287,9 @@ body{
                         justify-content: space-between;
 
                         .profile-image{
-                            @include profile_image();
+                            @include profile_image2();
                             cursor: pointer;
+                            box-shadow: $shad;
                         }
                         .nav-icons{
                             @include flex();
@@ -189,8 +329,8 @@ body{
                 }
                 .nav-bottom{
                     height: 75vh;
-                    overflow-y: scroll;
-                    padding: 1rem;
+                    overflow-y: auto;
+                    padding: 1rem .1rem;
                     background-color: $white;
                     
                     .wrap-bottom{
@@ -206,22 +346,23 @@ body{
                             display: flex;
                             justify-content: space-between;
                             gap: 1rem;
-                            border-bottom: 1px solid lighten($text, 50);
-                            padding-bottom: 0.5rem;
+                            border-bottom: 1px solid lighten($text, 60);
+                            padding-bottom: 1rem;
                             cursor: pointer;
                             padding: 0.5rem;
 
                             &:hover{
                                 // background-color: $bg;
-                                background-color: lighten($blue, 59);
+                                background-color: $bg;
                             }
+                            
                             
                             .name-image{
                                 @include flex();
                                 gap: 1rem;
                                 
                                 .friend-image{
-                                    @include profile_image();
+                                    @include profile_image2();
                                 }
                                 .left-cover{
     
@@ -239,6 +380,9 @@ body{
                                         .sent-message, .fa-check-double{
                                             font-size: small;
                                             font-weight: 300;
+                                        }
+                                        .seen{
+                                            color: $blue;
                                         }
                                     }
                                 } 
@@ -265,6 +409,9 @@ body{
                                 }
                             }
                         }
+                        .active{
+                            background-color: $chatbg;
+                        }
                     }
 
                     .loader-cover{
@@ -277,8 +424,10 @@ body{
                     }
                 }
             }
+
             .aside-right{
-                height:100vh; 
+                position: relative;
+                height:98vh; 
                 width: 65%;
                 border-left: 1px solid lighten($text, 60);
                 border-right: 1px solid lighten($text, 60);
@@ -353,6 +502,7 @@ body{
                                 border-radius: .3rem;
                                 margin-bottom: .5rem;
                                 justify-content: space-between;
+                                gap: 0.7rem;
                                 align-items: flex-end;
                                 max-width: 50%;
                                 
@@ -363,6 +513,9 @@ body{
                                 }
                                 .chat-time{
                                     font-size:smaller;
+                                    display: flex;
+                                    gap: 0.3rem;
+                                    align-items: flex-end;
                                 }
                                 .chat-owner{
                                     display: none;
@@ -437,7 +590,6 @@ body{
                                     }
                                 }
                                 .icon-sub-show{
-                                    display: block;
                                     display: flex;
                                     flex-direction: column;
                                     gap: .5rem;

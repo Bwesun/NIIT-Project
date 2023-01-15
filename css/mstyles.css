@@ -8,33 +8,35 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   transition: all 0.4s ease-in-out;
+  scrollbar-width: thin;
 }
 
 body {
   background-color: #f3f7f9;
 }
 body .main-body .body-wrap {
+  position: relative;
   height: 98vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   align-items: flex-start;
-  padding: 1rem;
+  padding: 0rem 1rem;
   flex-wrap: wrap;
   gap: 1rem;
 }
-body .main-body .body-wrap .aside-profile {
+body .main-body .body-wrap .aside-profile, body .main-body .body-wrap .user-profile {
   width: 30%;
   position: absolute;
   background-color: #f2f5f8;
   border-right: 1px solid #dcdee3;
   box-shadow: 4px 4px 16px -2px rgba(0, 0, 0, 0.2666666667);
   height: 98vh;
-  left: 0%;
-  top: 2.5%;
+  overflow-y: auto;
+  left: -100%;
 }
-body .main-body .body-wrap .aside-profile .profile-top {
+body .main-body .body-wrap .aside-profile .profile-top, body .main-body .body-wrap .aside-profile .user-profile-top, body .main-body .body-wrap .user-profile .profile-top, body .main-body .body-wrap .user-profile .user-profile-top {
   height: 7rem;
   background: #0e80b1;
   color: #fff;
@@ -44,24 +46,145 @@ body .main-body .body-wrap .aside-profile .profile-top {
   align-items: flex-end;
   justify-content: flex-start;
 }
-body .main-body .body-wrap .aside-profile .profile-top .profile-head {
+body .main-body .body-wrap .aside-profile .profile-top .profile-head, body .main-body .body-wrap .aside-profile .profile-top .user-profile-head, body .main-body .body-wrap .aside-profile .user-profile-top .profile-head, body .main-body .body-wrap .aside-profile .user-profile-top .user-profile-head, body .main-body .body-wrap .user-profile .profile-top .profile-head, body .main-body .body-wrap .user-profile .profile-top .user-profile-head, body .main-body .body-wrap .user-profile .user-profile-top .profile-head, body .main-body .body-wrap .user-profile .user-profile-top .user-profile-head {
   font-weight: 600;
 }
-body .main-body .body-wrap .aside-profile .profile-top .profile-arrow:hover {
+body .main-body .body-wrap .aside-profile .profile-top .profile-arrow:hover, body .main-body .body-wrap .aside-profile .profile-top .user-profile-close:hover, body .main-body .body-wrap .aside-profile .user-profile-top .profile-arrow:hover, body .main-body .body-wrap .aside-profile .user-profile-top .user-profile-close:hover, body .main-body .body-wrap .user-profile .profile-top .profile-arrow:hover, body .main-body .body-wrap .user-profile .profile-top .user-profile-close:hover, body .main-body .body-wrap .user-profile .user-profile-top .profile-arrow:hover, body .main-body .body-wrap .user-profile .user-profile-top .user-profile-close:hover {
   cursor: pointer;
 }
-body .main-body .body-wrap .aside-profile .profile-mid {
+body .main-body .body-wrap .aside-profile .profile-mid, body .main-body .body-wrap .aside-profile .user-profile-mid, body .main-body .body-wrap .user-profile .profile-mid, body .main-body .body-wrap .user-profile .user-profile-mid {
   padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-body .main-body .body-wrap .aside-profile .profile-mid .main-profile-image {
-  border-radius: 50%;
-  width: 10rem;
+body .main-body .body-wrap .aside-profile .profile-mid .profile-image-cover, body .main-body .body-wrap .aside-profile .profile-mid .user-profile-image-cover, body .main-body .body-wrap .aside-profile .user-profile-mid .profile-image-cover, body .main-body .body-wrap .aside-profile .user-profile-mid .user-profile-image-cover, body .main-body .body-wrap .user-profile .profile-mid .profile-image-cover, body .main-body .body-wrap .user-profile .profile-mid .user-profile-image-cover, body .main-body .body-wrap .user-profile .user-profile-mid .profile-image-cover, body .main-body .body-wrap .user-profile .user-profile-mid .user-profile-image-cover {
+  position: relative;
 }
-body .main-body .body-wrap .aside-profile .profile-mid .main-profile-image:hover {
-  background: linear-gradient(rgba(0, 0, 0, 0.2666666667), rgba(0, 0, 0, 0.2666666667));
+body .main-body .body-wrap .aside-profile .profile-mid .profile-image-cover .main-profile-image, body .main-body .body-wrap .aside-profile .profile-mid .profile-image-cover .user-main-profile-image, body .main-body .body-wrap .aside-profile .profile-mid .user-profile-image-cover .main-profile-image, body .main-body .body-wrap .aside-profile .profile-mid .user-profile-image-cover .user-main-profile-image, body .main-body .body-wrap .aside-profile .user-profile-mid .profile-image-cover .main-profile-image, body .main-body .body-wrap .aside-profile .user-profile-mid .profile-image-cover .user-main-profile-image, body .main-body .body-wrap .aside-profile .user-profile-mid .user-profile-image-cover .main-profile-image, body .main-body .body-wrap .aside-profile .user-profile-mid .user-profile-image-cover .user-main-profile-image, body .main-body .body-wrap .user-profile .profile-mid .profile-image-cover .main-profile-image, body .main-body .body-wrap .user-profile .profile-mid .profile-image-cover .user-main-profile-image, body .main-body .body-wrap .user-profile .profile-mid .user-profile-image-cover .main-profile-image, body .main-body .body-wrap .user-profile .profile-mid .user-profile-image-cover .user-main-profile-image, body .main-body .body-wrap .user-profile .user-profile-mid .profile-image-cover .main-profile-image, body .main-body .body-wrap .user-profile .user-profile-mid .profile-image-cover .user-main-profile-image, body .main-body .body-wrap .user-profile .user-profile-mid .user-profile-image-cover .main-profile-image, body .main-body .body-wrap .user-profile .user-profile-mid .user-profile-image-cover .user-main-profile-image {
+  border-radius: 50%;
+  width: 8.5rem;
+  height: 8.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #fff;
+  padding: 0.2rem;
+}
+body .main-body .body-wrap .aside-profile .profile-mid .profile-image-cover .main-profile-image:hover, body .main-body .body-wrap .aside-profile .profile-mid .profile-image-cover .user-main-profile-image:hover, body .main-body .body-wrap .aside-profile .profile-mid .user-profile-image-cover .main-profile-image:hover, body .main-body .body-wrap .aside-profile .profile-mid .user-profile-image-cover .user-main-profile-image:hover, body .main-body .body-wrap .aside-profile .user-profile-mid .profile-image-cover .main-profile-image:hover, body .main-body .body-wrap .aside-profile .user-profile-mid .profile-image-cover .user-main-profile-image:hover, body .main-body .body-wrap .aside-profile .user-profile-mid .user-profile-image-cover .main-profile-image:hover, body .main-body .body-wrap .aside-profile .user-profile-mid .user-profile-image-cover .user-main-profile-image:hover, body .main-body .body-wrap .user-profile .profile-mid .profile-image-cover .main-profile-image:hover, body .main-body .body-wrap .user-profile .profile-mid .profile-image-cover .user-main-profile-image:hover, body .main-body .body-wrap .user-profile .profile-mid .user-profile-image-cover .main-profile-image:hover, body .main-body .body-wrap .user-profile .profile-mid .user-profile-image-cover .user-main-profile-image:hover, body .main-body .body-wrap .user-profile .user-profile-mid .profile-image-cover .main-profile-image:hover, body .main-body .body-wrap .user-profile .user-profile-mid .profile-image-cover .user-main-profile-image:hover, body .main-body .body-wrap .user-profile .user-profile-mid .user-profile-image-cover .main-profile-image:hover, body .main-body .body-wrap .user-profile .user-profile-mid .user-profile-image-cover .user-main-profile-image:hover {
+  background-color: linear-gradient(rgba(0, 0, 0, 0.2666666667), rgba(0, 0, 0, 0.2666666667));
+}
+body .main-body .body-wrap .aside-profile .profile-mid .image-overlay, body .main-body .body-wrap .aside-profile .user-profile-mid .image-overlay, body .main-body .body-wrap .user-profile .profile-mid .image-overlay, body .main-body .body-wrap .user-profile .user-profile-mid .image-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #3f444e;
+  opacity: 0.8;
+  padding: 50%;
+  border-radius: 51%;
+  left: -100%;
+  display: none;
+  color: #fff;
+  text-align: center;
+}
+body .main-body .body-wrap .aside-profile .profile-mid .image-overlay .edit-image-icon, body .main-body .body-wrap .aside-profile .user-profile-mid .image-overlay .edit-image-icon, body .main-body .body-wrap .user-profile .profile-mid .image-overlay .edit-image-icon, body .main-body .body-wrap .user-profile .user-profile-mid .image-overlay .edit-image-icon {
+  font-size: large;
+  color: #fff;
+}
+body .main-body .body-wrap .aside-profile .profile-mid:hover .image-overlay, body .main-body .body-wrap .aside-profile .user-profile-mid:hover .image-overlay, body .main-body .body-wrap .user-profile .profile-mid:hover .image-overlay, body .main-body .body-wrap .user-profile .user-profile-mid:hover .image-overlay {
+  left: 0% !important;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: block;
+}
+body .main-body .body-wrap .aside-profile .main-profile-name, body .main-body .body-wrap .aside-profile .profile-about, body .main-body .body-wrap .aside-profile .user-main-profile-name, body .main-body .body-wrap .aside-profile .user-main-profile-email, body .main-body .body-wrap .user-profile .main-profile-name, body .main-body .body-wrap .user-profile .profile-about, body .main-body .body-wrap .user-profile .user-main-profile-name, body .main-body .body-wrap .user-profile .user-main-profile-email {
+  border-top: 1px solid #dcdee3;
+  padding: 1rem;
+  color: #3f444e;
+  background-color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+body .main-body .body-wrap .aside-profile .main-profile-name .main-name-cover .name-head, body .main-body .body-wrap .aside-profile .main-profile-name .main-name-cover .about-head, body .main-body .body-wrap .aside-profile .main-profile-name .profile-about-cover .name-head, body .main-body .body-wrap .aside-profile .main-profile-name .profile-about-cover .about-head, body .main-body .body-wrap .aside-profile .profile-about .main-name-cover .name-head, body .main-body .body-wrap .aside-profile .profile-about .main-name-cover .about-head, body .main-body .body-wrap .aside-profile .profile-about .profile-about-cover .name-head, body .main-body .body-wrap .aside-profile .profile-about .profile-about-cover .about-head, body .main-body .body-wrap .aside-profile .user-main-profile-name .main-name-cover .name-head, body .main-body .body-wrap .aside-profile .user-main-profile-name .main-name-cover .about-head, body .main-body .body-wrap .aside-profile .user-main-profile-name .profile-about-cover .name-head, body .main-body .body-wrap .aside-profile .user-main-profile-name .profile-about-cover .about-head, body .main-body .body-wrap .aside-profile .user-main-profile-email .main-name-cover .name-head, body .main-body .body-wrap .aside-profile .user-main-profile-email .main-name-cover .about-head, body .main-body .body-wrap .aside-profile .user-main-profile-email .profile-about-cover .name-head, body .main-body .body-wrap .aside-profile .user-main-profile-email .profile-about-cover .about-head, body .main-body .body-wrap .user-profile .main-profile-name .main-name-cover .name-head, body .main-body .body-wrap .user-profile .main-profile-name .main-name-cover .about-head, body .main-body .body-wrap .user-profile .main-profile-name .profile-about-cover .name-head, body .main-body .body-wrap .user-profile .main-profile-name .profile-about-cover .about-head, body .main-body .body-wrap .user-profile .profile-about .main-name-cover .name-head, body .main-body .body-wrap .user-profile .profile-about .main-name-cover .about-head, body .main-body .body-wrap .user-profile .profile-about .profile-about-cover .name-head, body .main-body .body-wrap .user-profile .profile-about .profile-about-cover .about-head, body .main-body .body-wrap .user-profile .user-main-profile-name .main-name-cover .name-head, body .main-body .body-wrap .user-profile .user-main-profile-name .main-name-cover .about-head, body .main-body .body-wrap .user-profile .user-main-profile-name .profile-about-cover .name-head, body .main-body .body-wrap .user-profile .user-main-profile-name .profile-about-cover .about-head, body .main-body .body-wrap .user-profile .user-main-profile-email .main-name-cover .name-head, body .main-body .body-wrap .user-profile .user-main-profile-email .main-name-cover .about-head, body .main-body .body-wrap .user-profile .user-main-profile-email .profile-about-cover .name-head, body .main-body .body-wrap .user-profile .user-main-profile-email .profile-about-cover .about-head {
+  color: #0e80b1;
+  font-weight: 400;
+  font-size: small;
+  padding: 0.5rem;
+}
+body .main-body .body-wrap .aside-profile .main-profile-name .main-name-cover .main-name, body .main-body .body-wrap .aside-profile .main-profile-name .main-name-cover .profile-about-content, body .main-body .body-wrap .aside-profile .main-profile-name .profile-about-cover .main-name, body .main-body .body-wrap .aside-profile .main-profile-name .profile-about-cover .profile-about-content, body .main-body .body-wrap .aside-profile .profile-about .main-name-cover .main-name, body .main-body .body-wrap .aside-profile .profile-about .main-name-cover .profile-about-content, body .main-body .body-wrap .aside-profile .profile-about .profile-about-cover .main-name, body .main-body .body-wrap .aside-profile .profile-about .profile-about-cover .profile-about-content, body .main-body .body-wrap .aside-profile .user-main-profile-name .main-name-cover .main-name, body .main-body .body-wrap .aside-profile .user-main-profile-name .main-name-cover .profile-about-content, body .main-body .body-wrap .aside-profile .user-main-profile-name .profile-about-cover .main-name, body .main-body .body-wrap .aside-profile .user-main-profile-name .profile-about-cover .profile-about-content, body .main-body .body-wrap .aside-profile .user-main-profile-email .main-name-cover .main-name, body .main-body .body-wrap .aside-profile .user-main-profile-email .main-name-cover .profile-about-content, body .main-body .body-wrap .aside-profile .user-main-profile-email .profile-about-cover .main-name, body .main-body .body-wrap .aside-profile .user-main-profile-email .profile-about-cover .profile-about-content, body .main-body .body-wrap .user-profile .main-profile-name .main-name-cover .main-name, body .main-body .body-wrap .user-profile .main-profile-name .main-name-cover .profile-about-content, body .main-body .body-wrap .user-profile .main-profile-name .profile-about-cover .main-name, body .main-body .body-wrap .user-profile .main-profile-name .profile-about-cover .profile-about-content, body .main-body .body-wrap .user-profile .profile-about .main-name-cover .main-name, body .main-body .body-wrap .user-profile .profile-about .main-name-cover .profile-about-content, body .main-body .body-wrap .user-profile .profile-about .profile-about-cover .main-name, body .main-body .body-wrap .user-profile .profile-about .profile-about-cover .profile-about-content, body .main-body .body-wrap .user-profile .user-main-profile-name .main-name-cover .main-name, body .main-body .body-wrap .user-profile .user-main-profile-name .main-name-cover .profile-about-content, body .main-body .body-wrap .user-profile .user-main-profile-name .profile-about-cover .main-name, body .main-body .body-wrap .user-profile .user-main-profile-name .profile-about-cover .profile-about-content, body .main-body .body-wrap .user-profile .user-main-profile-email .main-name-cover .main-name, body .main-body .body-wrap .user-profile .user-main-profile-email .main-name-cover .profile-about-content, body .main-body .body-wrap .user-profile .user-main-profile-email .profile-about-cover .main-name, body .main-body .body-wrap .user-profile .user-main-profile-email .profile-about-cover .profile-about-content {
+  font-weight: 400;
+  font-size: medium;
+  padding: 0.5rem;
+}
+body .main-body .body-wrap .aside-profile .main-profile-name .aside-icon, body .main-body .body-wrap .aside-profile .profile-about .aside-icon, body .main-body .body-wrap .aside-profile .user-main-profile-name .aside-icon, body .main-body .body-wrap .aside-profile .user-main-profile-email .aside-icon, body .main-body .body-wrap .user-profile .main-profile-name .aside-icon, body .main-body .body-wrap .user-profile .profile-about .aside-icon, body .main-body .body-wrap .user-profile .user-main-profile-name .aside-icon, body .main-body .body-wrap .user-profile .user-main-profile-email .aside-icon {
+  color: #3f444e;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+body .main-body .body-wrap .aside-profile .user-main-profile-name, body .main-body .body-wrap .user-profile .user-main-profile-name {
+  padding: 0.5rem;
+}
+body .main-body .body-wrap .aside-profile .user-main-profile-email, body .main-body .body-wrap .user-profile .user-main-profile-email {
+  padding: 0.5rem;
+  background-color: #f2f5f8;
+}
+body .main-body .body-wrap .aside-profile .profile-about, body .main-body .body-wrap .user-profile .profile-about {
+  background-color: #f2f5f8;
+  border-bottom: 1px solid #dcdee3;
+}
+body .main-body .body-wrap .aside-profile .user-profile-about, body .main-body .body-wrap .user-profile .user-profile-about {
+  background-color: #fff;
+  padding: 0.5rem;
+}
+body .main-body .body-wrap .aside-profile .profile-logout, body .main-body .body-wrap .aside-profile .user-profile-logout, body .main-body .body-wrap .user-profile .profile-logout, body .main-body .body-wrap .user-profile .user-profile-logout {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+body .main-body .body-wrap .aside-profile .profile-logout .logout-btn, body .main-body .body-wrap .aside-profile .profile-logout .delete-btn, body .main-body .body-wrap .aside-profile .profile-logout .report-btn, body .main-body .body-wrap .aside-profile .user-profile-logout .logout-btn, body .main-body .body-wrap .aside-profile .user-profile-logout .delete-btn, body .main-body .body-wrap .aside-profile .user-profile-logout .report-btn, body .main-body .body-wrap .user-profile .profile-logout .logout-btn, body .main-body .body-wrap .user-profile .profile-logout .delete-btn, body .main-body .body-wrap .user-profile .profile-logout .report-btn, body .main-body .body-wrap .user-profile .user-profile-logout .logout-btn, body .main-body .body-wrap .user-profile .user-profile-logout .delete-btn, body .main-body .body-wrap .user-profile .user-profile-logout .report-btn {
+  padding: 0.7rem 2rem;
+  border-radius: 3rem;
+  border: 1px solid #c0c4cc;
+  background-color: #fff;
+  color: #3f444e;
+  cursor: pointer;
+}
+body .main-body .body-wrap .aside-profile .profile-logout .logout-btn:hover, body .main-body .body-wrap .aside-profile .profile-logout .delete-btn:hover, body .main-body .body-wrap .aside-profile .profile-logout .report-btn:hover, body .main-body .body-wrap .aside-profile .user-profile-logout .logout-btn:hover, body .main-body .body-wrap .aside-profile .user-profile-logout .delete-btn:hover, body .main-body .body-wrap .aside-profile .user-profile-logout .report-btn:hover, body .main-body .body-wrap .user-profile .profile-logout .logout-btn:hover, body .main-body .body-wrap .user-profile .profile-logout .delete-btn:hover, body .main-body .body-wrap .user-profile .profile-logout .report-btn:hover, body .main-body .body-wrap .user-profile .user-profile-logout .logout-btn:hover, body .main-body .body-wrap .user-profile .user-profile-logout .delete-btn:hover, body .main-body .body-wrap .user-profile .user-profile-logout .report-btn:hover {
+  background-color: #0e80b1;
+  color: #fff;
+  font-weight: bold;
+}
+body .main-body .body-wrap .aside-profile .profile-logout .delete-btn, body .main-body .body-wrap .aside-profile .profile-logout .report-btn, body .main-body .body-wrap .aside-profile .user-profile-logout .delete-btn, body .main-body .body-wrap .aside-profile .user-profile-logout .report-btn, body .main-body .body-wrap .user-profile .profile-logout .delete-btn, body .main-body .body-wrap .user-profile .profile-logout .report-btn, body .main-body .body-wrap .user-profile .user-profile-logout .delete-btn, body .main-body .body-wrap .user-profile .user-profile-logout .report-btn {
+  color: #ea0038;
+  border: 1px solid #ea0038;
+  font-size: smaller;
+  padding: 0.3rem 0.6rem;
+}
+body .main-body .body-wrap .aside-profile .profile-logout .delete-btn:hover, body .main-body .body-wrap .aside-profile .profile-logout .report-btn:hover, body .main-body .body-wrap .aside-profile .user-profile-logout .delete-btn:hover, body .main-body .body-wrap .aside-profile .user-profile-logout .report-btn:hover, body .main-body .body-wrap .user-profile .profile-logout .delete-btn:hover, body .main-body .body-wrap .user-profile .profile-logout .report-btn:hover, body .main-body .body-wrap .user-profile .user-profile-logout .delete-btn:hover, body .main-body .body-wrap .user-profile .user-profile-logout .report-btn:hover {
+  background-color: #ff517b;
+}
+body .main-body .body-wrap .user-profile {
+  border-left: 1px solid #dcdee3;
+  left: 102%;
+  width: 30%;
+  position: absolute;
+}
+body .main-body .body-wrap .user-profile-show {
+  display: block;
+  left: 71%;
+}
+body .main-body .body-wrap .show-profile {
+  left: 0%;
+  display: block;
 }
 body .main-body .body-wrap .aside-left {
   height: 100vh;
@@ -81,10 +204,13 @@ body .main-body .body-wrap .aside-left .nav-top .wrap-top {
 }
 body .main-body .body-wrap .aside-left .nav-top .wrap-top .profile-image {
   width: 3rem;
+  height: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
-  box-shadow: 4px 4px 16px -2px rgba(0, 0, 0, 0.2666666667);
   padding: 0.2rem;
   cursor: pointer;
+  box-shadow: 4px 4px 16px -2px rgba(0, 0, 0, 0.2666666667);
 }
 body .main-body .body-wrap .aside-left .nav-top .wrap-top .nav-icons {
   display: flex;
@@ -131,8 +257,8 @@ body .main-body .body-wrap .aside-left .nav-mid .wrap-mid .archived .archive-ico
 }
 body .main-body .body-wrap .aside-left .nav-bottom {
   height: 75vh;
-  overflow-y: scroll;
-  padding: 1rem;
+  overflow-y: auto;
+  padding: 1rem 0.1rem;
   background-color: #fff;
 }
 body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .message-nav .chat-heading {
@@ -143,13 +269,13 @@ body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  border-bottom: 1px solid #c0c4cc;
-  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dcdee3;
+  padding-bottom: 1rem;
   cursor: pointer;
   padding: 0.5rem;
 }
 body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div:hover {
-  background-color: #eef9fe;
+  background-color: #f2f5f8;
 }
 body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image {
   display: flex;
@@ -159,8 +285,10 @@ body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .nam
 }
 body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image .friend-image {
   width: 3rem;
+  height: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
-  box-shadow: 4px 4px 16px -2px rgba(0, 0, 0, 0.2666666667);
   padding: 0.2rem;
 }
 body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image .left-cover .friend-name {
@@ -178,6 +306,9 @@ body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .nam
 body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image .left-cover .friend-message .sent-message, body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image .left-cover .friend-message .fa-check-double {
   font-size: small;
   font-weight: 300;
+}
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .name-image .left-cover .friend-message .seen {
+  color: #0e80b1;
 }
 body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .friend-details {
   display: flex;
@@ -205,6 +336,9 @@ body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .friend-div .fri
   font-size: small;
   font-weight: 300;
 }
+body .main-body .body-wrap .aside-left .nav-bottom .wrap-bottom .active {
+  background-color: #eaf7fd;
+}
 body .main-body .body-wrap .aside-left .nav-bottom .loader-cover {
   display: flex;
   align-items: center;
@@ -215,7 +349,8 @@ body .main-body .body-wrap .aside-left .nav-bottom .loader-cover .loader {
   width: 4rem;
 }
 body .main-body .body-wrap .aside-right {
-  height: 100vh;
+  position: relative;
+  height: 98vh;
   width: 65%;
   border-left: 1px solid #dcdee3;
   border-right: 1px solid #dcdee3;
@@ -301,6 +436,7 @@ body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .cover-chat-wrap .c
   border-radius: 0.3rem;
   margin-bottom: 0.5rem;
   justify-content: space-between;
+  gap: 0.7rem;
   align-items: flex-end;
   max-width: 50%;
 }
@@ -310,6 +446,9 @@ body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .cover-chat-wrap .c
 }
 body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .cover-chat-wrap .chat-wrap .chat-time, body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .cover-chat-wrap-sub .chat-wrap .chat-time {
   font-size: smaller;
+  display: flex;
+  gap: 0.3rem;
+  align-items: flex-end;
 }
 body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .cover-chat-wrap .chat-wrap .chat-owner, body .main-body .body-wrap .aside-right .aside-mid .mid-wrap .cover-chat-wrap-sub .chat-wrap .chat-owner {
   display: none;
@@ -376,7 +515,6 @@ body .main-body .body-wrap .aside-right .aside-bottom .bottom-wrap .text-area .o
   color: #656bc0;
 }
 body .main-body .body-wrap .aside-right .aside-bottom .bottom-wrap .text-area .other-icon .icon-sub-show {
-  display: block;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
