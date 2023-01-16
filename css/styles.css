@@ -232,11 +232,99 @@ body .site-header .site-nav2 .nav-wrap2 {
 .main-body .signup-section .aside-mid .register-card .signup-inputs .signup-form .divup .div {
   width: 100%;
 }
+.main-body .site-footer {
+  text-align: center;
+}
 .main-body .show-signup {
   left: 0% !important;
   top: 0%;
   position: absolute;
   display: flex !important;
+}
+
+.contact-body, .about-body {
+  padding: 2rem;
+}
+.contact-body .contact-head, .contact-body .about-head, .about-body .contact-head, .about-body .about-head {
+  font-size: 2.5rem;
+  color: #037fb4;
+  text-align: center;
+}
+.contact-body .contact-section, .contact-body .about-section, .about-body .contact-section, .about-body .about-section {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.contact-body .contact-section .contact-card, .contact-body .about-section .contact-card, .about-body .contact-section .contact-card, .about-body .about-section .contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+  background-color: #fff;
+  width: 20rem;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  box-shadow: 4px 4px 16px -2px rgba(0, 0, 0, 0.2666666667);
+  height: 13rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.contact-body .contact-section .contact-card .contact-icon, .contact-body .about-section .contact-card .contact-icon, .about-body .contact-section .contact-card .contact-icon, .about-body .about-section .contact-card .contact-icon {
+  font-size: 3rem;
+  color: #037fb4;
+}
+.contact-body .contact-section .contact-card .card-body, .contact-body .about-section .contact-card .card-body, .about-body .contact-section .contact-card .card-body, .about-body .about-section .contact-card .card-body {
+  text-align: center;
+  font-size: large;
+}
+.contact-body .site-footer, .about-body .site-footer {
+  text-align: center;
+}
+
+.about-body .about-section {
+  padding: 1rem;
+  gap: 1rem;
+  width: 100%;
+  align-items: flex-start;
+}
+.about-body .about-section .about-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.about-body .about-section .about-left .about-image {
+  width: 20rem;
+  border-radius: 0.6rem;
+  box-shadow: 4px 4px 16px -2px rgba(0, 0, 0, 0.2666666667);
+}
+.about-body .about-section .about-left .image-text {
+  -moz-columns: #3f444e;
+       columns: #3f444e;
+  text-align: center;
+  color: #00151e;
+}
+.about-body .about-section .about-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 30rem;
+}
+.about-body .about-section .about-right .about-head {
+  text-align: left;
+}
+.about-body .about-section .about-right .about-content {
+  font-size: large;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 @media screen and (max-width: 560px) {

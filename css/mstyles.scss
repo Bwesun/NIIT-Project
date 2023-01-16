@@ -581,6 +581,9 @@ body{
                                         &:nth-of-type(3){
                                             background-color: purple;
                                         }
+                                        &:nth-of-type(4){
+                                            background-color: $blue;
+                                        }
 
                                         &:hover{
                                             background-color: lighten($white, 20);
@@ -593,7 +596,7 @@ body{
                                     flex-direction: column;
                                     gap: .5rem;
                                     position: absolute;
-                                    top: -330%;
+                                    top: -440%;
                                     left: 0%;
                                     animation: forwards ;
                                 }

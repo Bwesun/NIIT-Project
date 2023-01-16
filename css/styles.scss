@@ -288,13 +288,101 @@ body{
                 }
             }
         }
-        .site-footer{}
+        .site-footer{
+            text-align: center;
+        }
 
         .show-signup{
             left: 0% !important;
             top: 0%;
             position: absolute;
             display: flex !important;
+        }
+    }
+
+    .contact-body, .about-body{
+        padding: 2rem;
+
+        .contact-head, .about-head{
+            font-size: 2.5rem;
+            color: $blue;
+            text-align: center;
+        }
+
+        .contact-section, .about-section{
+            padding: 1rem;
+            @include flex();
+            gap: 3rem;
+
+            .contact-card{
+                @include flex();
+                gap: 2rem;
+                flex-direction: column;
+                background-color: $white;
+                width: 20rem;
+                border-radius: .7rem;
+                padding: 1rem;
+                box-shadow: $shad;
+                height: 13rem;
+                object-fit: cover;
+
+                .contact-icon{
+                    font-size: 3rem;
+                    color: $blue;
+                }
+                .card-body{
+                    text-align: center;
+                    font-size: large;
+                }
+            }
+        }
+        .site-footer{
+            text-align: center;
+        }
+    }
+
+    .about-body{
+
+        .about-section{
+            padding: 1rem;
+            gap: 1rem;
+            width: 100%;
+            align-items: flex-start;
+
+            .about-left{
+                @include flex();
+                justify-content: flex-end;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                .about-image{
+                    width: 20rem;
+                    border-radius: .6rem;
+                    box-shadow: $shad;
+                }
+                .image-text{
+                    columns: $text;
+                    text-align: center;
+                    color: darken($blue,30);
+                }
+            }
+
+            .about-right{
+                @include flex();
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+                width: 30rem;
+
+                .about-head{
+                    text-align: left;
+                }
+                .about-content{
+                    font-size: large;
+                    line-height: 1.8;
+                    text-align: justify;
+                }
+            }
         }
     }
 
@@ -334,5 +422,4 @@ body{
     .site-nav{
         display: none;
     }
-    
 }
