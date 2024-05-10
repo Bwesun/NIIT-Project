@@ -8,7 +8,7 @@ let signupButton = document.querySelector(".register-btn");
         closeButton.onclick = function(){
             signupSection.classList.remove('show-signup');
         }
-        
+         
         // FORM VALIDATION AND PROGRESS SCRIPT
         function validation(totalNumber){
             let firstName = document.regform.firstname.value;
