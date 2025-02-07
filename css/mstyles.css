@@ -523,8 +523,7 @@ body .main-body .body-wrap .aside-right .aside-bottom .bottom-wrap .text-area .o
   position: absolute;
   top: -440%;
   left: 0%;
-  -webkit-animation: forwards;
-          animation: forwards;
+  animation: forwards;
 }
 body .main-body .body-wrap .aside-right .aside-bottom .bottom-wrap .text-area .other-icon:hover:nth-of-type(1) {
   color: #0e80b1;
